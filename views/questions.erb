@@ -1,0 +1,16 @@
+
+  <h2 style="text-align:center;color: red"> Customer Satisfaction Questionnaire</h2>
+    <form action="/answers" method="post" onsubmit= "return checkRadio(this.radioName);">
+      <% @questions.each_with_index do |question, idx| %>
+        <h3><%= (idx + 1).to_s + ". " + question[0] %></h3>
+        <% @options[idx].each_with_index do |option, opt_idx| %>
+          <br/>
+          <% if option %>
+            <input type="radio" name="answer[<%=idx%>]" value="<%=opt_idx%>" required＝"true"/>
+            <span><%=("A".."Z").to_a[opt_idx]%>    <%= option %></span>
+          <% end %>
+        <% end %>
+      <% end %>
+      <br/><br/>
+      <button class="btn btn-primary">Submit</button>
+    </form>

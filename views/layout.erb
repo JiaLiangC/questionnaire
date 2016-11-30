@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="navbar navbar-default">
+            <ul class=" nav navbar-nav">
+              <li class="<%= 'active' if controller_name == '' %>"><a href="/">Home</a></li>
+              <li class="<%= 'active' if controller_name == 'questions' %>"><a href="/questions">Start answer Questionnaire</a></li>
+              <li class="<%= 'active' if controller_name == 'reports' %>"><a href="/reports">Reports</a></li>
+            </ul>
+          </div>
+          <%= yield%>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

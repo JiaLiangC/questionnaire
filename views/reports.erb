@@ -1,0 +1,14 @@
+<div>
+  <ul class="list-group">
+    <%@res.each do |k, v|%>
+      <li class="list-group-item">
+        <span>第<%= (k.to_i+1).to_s %>题</span>
+
+        <%v.each do |k, v|%>
+          <span><%=("A".."Z").to_a[k.to_i]%>选<%= v%>次</span>
+        <%end%>
+
+      </li>
+    <%end%>
+  </ul>
+</div>

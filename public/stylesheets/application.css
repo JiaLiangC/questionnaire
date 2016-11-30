@@ -1,0 +1,6 @@
+@import "bootstrap.min.css";
+
+div.home{
+  border: solid 2px #EDEDED ;
+  height: 960px;
+}
